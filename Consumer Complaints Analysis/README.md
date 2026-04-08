@@ -77,45 +77,6 @@ The dataset contains over 62,000 records of consumer complaints with the followi
 * Strong performance on majority classes
 * Reduced performance on minority classes (e.g., monetary relief cases)
 
----
-
-## Project Structure
-
-```
-├── Complaints_Analysis.ipynb   # Main analysis notebook
-├── data/                       # Dataset files
-└── README.md                   # Project documentation
-```
-
----
-
-## Installation & Usage
-
-### 1. Install Dependencies
-
-```bash
-pip install pandas numpy matplotlib seaborn plotly scikit-learn xgboost
-```
-
-### 2. Run the Project
-
-```bash
-jupyter notebook Complaints_Analysis.ipynb
-```
-
----
 
 ## Future Work
-
-* Improve model performance using hyperparameter tuning
-* Address class imbalance techniques (SMOTE, weighting)
-* Deploy model as an API service
 * Develop interactive dashboards using Power BI or Tableau
-
----
-
-## Author
-
-**Ahmed Saber**
-
----
