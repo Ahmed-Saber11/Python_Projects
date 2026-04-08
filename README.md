@@ -9,4 +9,4 @@ The goal of this repository is to showcase practical applications of Python in a
 - Python 
 - Pandas, NumPy – Data manipulation and analysis
 - Matplotlib, Seaborn – Visualization
-- Jupyter Notebook and VS code – Interactive development environment
+- scikit-learn - Machine learning
