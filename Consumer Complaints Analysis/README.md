@@ -1,55 +1,121 @@
-Consumer Complaints Analysis & Classification
-This project provides a comprehensive analysis of consumer complaint data submitted to the CFPB (Consumer Financial Protection Bureau). It utilizes exploratory data analysis (EDA) to uncover trends in financial disputes and employs machine learning to classify company responses, helping to predict outcomes based on complaint characteristics.
+# Consumer Complaints Analysis & Classification
 
-📋 Project Overview
-The primary goal of this project is to analyze the relationship between various financial products, the issues raised by consumers, and the subsequent responses from companies. By leveraging a dataset of over 62,000 records, the project identifies key drivers of consumer dissatisfaction and evaluates the efficiency of company resolutions.
+## Overview
 
-📊 Dataset Description
-The analysis is performed on a consumer complaints dataset containing several key features:
+This project presents a comprehensive analysis of consumer complaint data provided by the Consumer Financial Protection Bureau (CFPB). It combines exploratory data analysis (EDA) and machine learning techniques to uncover patterns in financial disputes and predict company responses based on complaint characteristics.
 
-Complaint ID: Unique identifier for each complaint.
+---
 
-Product & Sub-product: The type of financial service involved (e.g., Mortgage, Credit Reporting).
+## Objectives
 
-Issue & Sub-issue: The specific problem identified by the consumer.
+* Analyze relationships between financial products and reported issues
+* Identify key drivers of customer dissatisfaction
+* Evaluate company response efficiency
+* Build a predictive model for complaint outcomes
 
-Company Response to Consumer: The outcome of the complaint (e.g., "Closed with explanation," "Closed with monetary relief").
+---
 
-Timely Response: Indicates whether the company responded within the required timeframe.
+## Dataset Description
 
-Submitted via: The channel used to submit the complaint (Web, Referral, Phone, etc.).
+The dataset contains over 62,000 records of consumer complaints with the following features:
 
-🛠️ Tech Stack
-Language: Python
+* **Complaint ID** – Unique identifier for each record
+* **Product / Sub-product** – Financial service category
+* **Issue / Sub-issue** – Reported problem details
+* **Company Response to Consumer** – Resolution outcome
+* **Timely Response** – Indicates if response met SLA
+* **Submitted via** – Submission channel (Web, Phone, Referral, etc.)
 
-Libraries: * Data Manipulation: pandas, numpy
+---
 
-Visualization: matplotlib, seaborn, plotly
+## Technology Stack
 
-Machine Learning: scikit-learn, XGBoost
+**Programming Language**
 
-🚀 Key Analysis Workflow
-Exploratory Data Analysis (EDA): * Visualizing complaint distribution by State and Product.
+* Python
 
-Analyzing the frequency of specific issues (e.g., "Applying for a mortgage").
+**Libraries**
 
-Mapping the relationship between issues and sub-issues to identify data gaps.
+* Data Processing: `pandas`, `numpy`
+* Visualization: `matplotlib`, `seaborn`, `plotly`
+* Machine Learning: `scikit-learn`, `xgboost`
 
-Data Preprocessing:
+---
 
-Handling missing values in critical columns like Sub-issue.
+## Methodology
 
-Encoding categorical variables using LabelEncoder for model readiness.
+### 1. Exploratory Data Analysis (EDA)
 
-Machine Learning Modeling:
+* Distribution analysis by product and state
+* Frequency analysis of complaint issues
+* Relationship mapping between issues and sub-issues
 
-Splitting data into training and testing sets.
+### 2. Data Preprocessing
 
-Training an XGBClassifier to predict the Company response to consumer.
+* Handling missing values (notably in *Sub-issue*)
+* Encoding categorical variables using `LabelEncoder`
+* Preparing features for modeling
 
-Evaluation:
+### 3. Model Development
 
-Assessing model performance using Accuracy scores and detailed Classification Reports (Precision, Recall, F1-Score).
+* Train-test split
+* Model training using **XGBoost Classifier (XGBClassifier)**
+* Prediction of company responses
 
-📈 Results
-The implementation achieves high classification accuracy (approx. 96%), particularly in identifying standard resolutions, though it highlights challenges in predicting minority classes like specific monetary relief outcomes.
+### 4. Evaluation Metrics
+
+* Accuracy Score
+* Precision
+* Recall
+* F1-Score
+
+---
+
+## Results
+
+* Achieved approximately **96% accuracy**
+* Strong performance on majority classes
+* Reduced performance on minority classes (e.g., monetary relief cases)
+
+---
+
+## Project Structure
+
+```
+├── Complaints_Analysis.ipynb   # Main analysis notebook
+├── data/                       # Dataset files
+└── README.md                   # Project documentation
+```
+
+---
+
+## Installation & Usage
+
+### 1. Install Dependencies
+
+```bash
+pip install pandas numpy matplotlib seaborn plotly scikit-learn xgboost
+```
+
+### 2. Run the Project
+
+```bash
+jupyter notebook Complaints_Analysis.ipynb
+```
+
+---
+
+## Future Work
+
+* Improve model performance using hyperparameter tuning
+* Address class imbalance techniques (SMOTE, weighting)
+* Deploy model as an API service
+* Develop interactive dashboards using Power BI or Tableau
+
+---
+
+## Author
+
+**Ahmed Saber**
+
+---
